@@ -9,8 +9,9 @@
 # Requires: see Modulefile
 #
 # Sample Usage:
-# class 
-class timezone {
+# class { "tzdata" : timezone => 'Etc/UTC' }
+
+class timezone( $timezone = "Etc/UTC" ) {
 
   package { "tzdata":
     ensure  => installed,
